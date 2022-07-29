@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -18,9 +14,26 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "typeRoots": ["node_modules/@types", "node_modules"],
+    "types": [
+      "node",
+      "jest",
+      "lodash",
+      "react",
+      "react-dom",
+      "react-redux",
+      "redux-logger",
+      "react-router-dom",
+      "react-router-redux",
+      "redux",
+      "binary-type-tree",
+      "redux-form",
+      "tedb",
+      "react-tap-event-plugin",
+      "react-hot-loader"
+    ],
+    "outDir": "dist"
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src", "node_modules/**/*.d.ts", "node_modules/@types/**/*.d.ts"]
 }
