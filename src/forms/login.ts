@@ -11,6 +11,7 @@ export const loginForm = [
     label: "Usuario",
     placeholder: "Ingrese un usuario",
     name: "username",
+    autoComplete: "true",
     validations: [
       {
         type: "required",
@@ -35,6 +36,7 @@ export const loginForm = [
     label: "Contraseña",
     placeholder: "••••••••",
     name: "password",
+    autoComplete: "false",
     validations: [
       {
         type: "required",
