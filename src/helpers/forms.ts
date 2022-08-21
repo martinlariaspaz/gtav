@@ -1,5 +1,6 @@
 import * as Yup from "yup";
 import { loginForm } from "../forms/login";
+import { myAccount } from "../forms/myAccount";
 import { registerForm } from "../forms/register";
 
 export type GenericObject = {
@@ -18,6 +19,7 @@ export type MyForm = {
   value: string;
   type: string;
   label: string;
+  autoComplete: string;
   placeholder: string;
 };
 
@@ -56,11 +58,17 @@ export const getInitialValues = (myForm: MyForm[]) => {
   return initialValues;
 };
 
-export const formExtractor = (form: string): MyForm[] | undefined => {
+export type FormTypes = "login" | "register" | "myAccount";
+
+export const formExtractor = (form: FormTypes): MyForm[] => {
   switch (form) {
     case "login":
       return loginForm;
     case "register":
       return registerForm;
+    case 'myAccount':
+      return myAccount;
+    default:
+      return [];
   }
 };

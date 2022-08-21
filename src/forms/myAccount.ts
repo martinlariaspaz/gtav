@@ -3,11 +3,11 @@ export interface formData {
   password: string;
 }
 
-export const registerForm = [
+export const myAccount = [
   {
     id: 0,
     type: "text",
-    value: "",
+    value: "asd",
     label: "Nombre completo",
     placeholder: "Ingrese su nombre completo",
     name: "fullName",
