@@ -33,7 +33,7 @@ export const CustomForm = ({
     initialValues,
     validate: yupResolver(validationSchema),
   });
-  console.log(getInitialValues(myForm), initialData);
+
   return (
     <form
       className={classes.form}
