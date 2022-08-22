@@ -17,7 +17,6 @@ export const Account = () => {
     const auth = JSON.parse(authSaved);
     const response = await apiWithKey("dashboard/myself", auth.token);
     const myInfo = await response.json();
-    console.log(myInfo);
     const initialData = {
       fullName: myInfo.data.fullName,
       birthDate: myInfo.data.birthDate,
