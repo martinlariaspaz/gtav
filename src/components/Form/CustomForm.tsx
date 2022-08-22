@@ -28,7 +28,7 @@ export const CustomForm = ({
 
   const myForm = formExtractor(formName);
   const validationSchema = getValidationSchema(myForm);
-  const initialValues = initialData;
+  const initialValues = initialData ? initialData : getInitialValues(myForm);
   const form = useForm({
     initialValues,
     validate: yupResolver(validationSchema),
