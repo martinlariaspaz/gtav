@@ -1,8 +1,3 @@
-export interface formData {
-  username: string;
-  password: string;
-}
-
 export const registerForm = [
   {
     id: 0,

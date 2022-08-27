@@ -2,6 +2,7 @@ import * as Yup from "yup";
 import { loginForm } from "../forms/login";
 import { myAccount } from "../forms/myAccount";
 import { registerForm } from "../forms/register";
+import { newDatabase } from "../forms/newDatabase";
 
 export type GenericObject = {
   [x: string]: any;
@@ -58,7 +59,7 @@ export const getInitialValues = (myForm: MyForm[]) => {
   return initialValues;
 };
 
-export type FormTypes = "login" | "register" | "myAccount";
+export type FormTypes = "login" | "register" | "myAccount" | "newDatabase";
 
 export const formExtractor = (form: FormTypes): MyForm[] => {
   switch (form) {
@@ -66,8 +67,10 @@ export const formExtractor = (form: FormTypes): MyForm[] => {
       return loginForm;
     case "register":
       return registerForm;
-    case 'myAccount':
+    case "myAccount":
       return myAccount;
+    case "newDatabase":
+      return newDatabase;
     default:
       return [];
   }
