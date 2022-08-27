@@ -8,21 +8,12 @@ import {
   Stack,
   Box,
 } from "@mantine/core";
-import {
-  TablerIcon,
-  IconHome2,
-  IconGauge,
-  IconDeviceDesktopAnalytics,
-  IconFingerprint,
-  IconCalendarStats,
-  IconUser,
-  IconSettings,
-  IconLogout,
-} from "@tabler/icons";
+import { TablerIcon, IconUser, IconLogout, IconDatabase } from "@tabler/icons";
 import { MantineLogo } from "@mantine/ds";
 import { useDispatch } from "react-redux";
 import { logoutAction } from "../actions/auth";
 import { PageSelector } from "./PageSelector";
+import { NavigationProgress } from "@mantine/nprogress";
 
 interface NavbarLinkProps {
   icon: TablerIcon;
@@ -46,13 +37,8 @@ function NavbarLink({ icon: Icon, label, active, onClick }: NavbarLinkProps) {
 }
 
 const mockdata = [
-  { icon: IconHome2, label: "Home", value: "home" },
-  { icon: IconGauge, label: "Dashboard", value: "dashboard" },
-  { icon: IconDeviceDesktopAnalytics, label: "Analytics", value: "analytics" },
-  { icon: IconCalendarStats, label: "Releases", value: "releases" },
+  { icon: IconDatabase, label: "Database", value: "database" },
   { icon: IconUser, label: "Account", value: "account" },
-  { icon: IconFingerprint, label: "Security", value: "security" },
-  { icon: IconSettings, label: "Settings", value: "settings" },
 ];
 
 export function Main() {
@@ -75,6 +61,7 @@ export function Main() {
 
   return (
     <Box className={classes.container}>
+      <NavigationProgress />
       <Navbar style={{ maxHeight: "100vh" }} width={{ base: 80 }} p="md">
         <Center>
           <MantineLogo type="mark" size={30} />

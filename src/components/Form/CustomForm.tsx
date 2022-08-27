@@ -55,6 +55,7 @@ export const CustomForm = ({
               placeholder={placeholder}
               type={type}
               autoComplete={autoComplete}
+              disabled={loading}
               {...form.getInputProps(name)}
             />
           );

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import { Text } from "@mantine/core";
+import { Title } from "@mantine/core";
 import { CustomForm } from "../../components/Form/CustomForm";
 import { GenericObject } from "../../helpers/forms";
 import { apiWithKey } from "../../helpers/api";
@@ -38,7 +38,7 @@ export const Account = () => {
 
   return (
     <>
-      <Text variant="text">Mi cuenta</Text>
+      <Title order={2}>Mi cuenta</Title>
       <CustomForm
         formName="myAccount"
         onSubmit={handleModifyAccount}

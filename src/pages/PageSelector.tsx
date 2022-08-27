@@ -1,4 +1,5 @@
 import { Account } from "./MainPages/Account";
+import { Database } from "./MainPages/Database";
 
 export const PageSelector = ({ page }: { page: string }) => {
   switch (page) {
@@ -8,8 +9,8 @@ export const PageSelector = ({ page }: { page: string }) => {
       return <h1>Dashboard</h1>;
     case "analytics":
       return <h1>Analytics</h1>;
-    case "releases":
-      return <h1>Releases</h1>;
+    case "database":
+      return <Database />;
     case "account":
       return <Account />;
     case "security":
