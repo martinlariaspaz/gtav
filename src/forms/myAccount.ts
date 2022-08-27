@@ -147,28 +147,15 @@ export const myAccount = [
     id: 6,
     type: "password",
     value: "",
-    label: "Repite contraseña",
+    label: "Nueva contraseña (Dejar en blanco si no se desea cambiar)",
     placeholder: "••••••••",
-    name: "password2",
+    name: "newPassword",
     autoComplete: "false",
     validations: [
-      {
-        type: "required",
-        message: "La contraseña es requerida",
-      },
-      {
-        type: "minLength",
-        quantity: 6,
-        message: "Este campo debe tener un mínimo de 6 caractéres",
-      },
       {
         type: "maxLength",
         quantity: 15,
         message: "Este campo debe tener un máximo de 15 caractéres",
-      },
-      {
-        type: "repeated",
-        message: "Las contraseñas no coinciden",
       },
     ],
   },

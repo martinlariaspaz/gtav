@@ -24,7 +24,7 @@ export const Account = () => {
       username: myInfo.data.username,
       email: myInfo.data.email,
       password: "",
-      password2: "",
+      newPassword: "",
     };
     setInitialMyAccount(initialData);
     setLoading(false);
