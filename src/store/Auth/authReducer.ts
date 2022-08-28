@@ -5,6 +5,7 @@ const INITIAL_STATE = {
   email: "",
   fullName: "",
   token: "",
+  logged: false,
 };
 
 export const authReducer = (
@@ -17,6 +18,7 @@ export const authReducer = (
         email: action.payload.email,
         fullName: action.payload.fullName,
         token: action.payload.token,
+        logged: true,
       };
     case "logout":
       return INITIAL_STATE;

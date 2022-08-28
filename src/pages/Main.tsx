@@ -1,4 +1,5 @@
-import { useState } from "react";
+import React from "react";
+
 import {
   Navbar,
   Center,
@@ -43,7 +44,7 @@ const mockdata = [
 
 export function Main() {
   const { classes } = useStyles();
-  const [active, setActive] = useState(mockdata[0].value);
+  const [active, setActive] = React.useState(mockdata[0].value);
   const dispatch = useDispatch();
 
   const links = mockdata.map((link) => (

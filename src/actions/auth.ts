@@ -92,6 +92,7 @@ export const logoutAction = async (dispatch: React.Dispatch<AnyAction>) => {
   if (resp.ok) {
     localStorage.removeItem("auth");
     dispatch({ type: "logout" });
+    dispatch({ type: "dashboard-clean" });
   }
   endLoading(dispatch);
 };
