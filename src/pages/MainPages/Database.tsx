@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Title } from "@mantine/core";
+import { Select, Title } from "@mantine/core";
 import { showNotification, updateNotification } from "@mantine/notifications";
 import { IconCheck, IconX } from "@tabler/icons";
 
@@ -48,10 +48,16 @@ export const Database = () => {
   return (
     <>
       <Title order={2}>Base de datos</Title>
+      <Select
+        data={["Agregar una nueva base de datos"]}
+        defaultValue="Agregar una nueva base de datos"
+        label="Mis bases de datos"
+        disabled={loading}
+      ></Select>
       <CustomForm
         formName="newDatabase"
         onSubmit={handleTest}
-        submitName="Test"
+        submitName="Test & Save"
         loading={loading}
       />
     </>
