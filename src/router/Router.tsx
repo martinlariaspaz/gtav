@@ -8,6 +8,7 @@ import { AuthState } from "../store/Auth/types";
 import { Main } from "../pages/Main";
 import { State } from "../store/State/types";
 import { Loading } from "../pages/Loading";
+import { dashboardInit } from "../actions/dashboard";
 
 const routes = (auth: AuthState) => {
   if (auth.token) {
@@ -29,7 +30,10 @@ export const Router = () => {
 
   React.useEffect(() => {
     dispatch(startChenking);
-  }, [dispatch]);
+    if (auth.logged) {
+      dispatch(dashboardInit(auth.token));
+    }
+  }, [auth.logged, auth.token, dispatch]);
 
   if (loading) return <Loading />;
   return <div className={classes.appContainer}>{routeResult}</div>;

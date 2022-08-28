@@ -18,8 +18,11 @@ export const dashboardReducer = (
   action: AnyAction
 ): DashboardState => {
   switch (action.type) {
-    case "init": {
+    case "dashboard-init": {
       return action.payload;
+    }
+    case "dashboard-clean": {
+      return INITIAL_STATE;
     }
     default:
       return state;
