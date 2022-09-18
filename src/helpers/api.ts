@@ -1,5 +1,5 @@
 const BASE_URL = "http://127.0.0.1:4000/";
-// const BASE_URL = "http://190.230.156.192:4000/";
+// const BASE_URL = "http://181.105.24.71:4000/";
 
 export const apiWithoutJWT = (
   URL: string,
