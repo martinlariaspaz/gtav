@@ -10,7 +10,6 @@ export const dashboardInit = (token: string) => async (
   const { data: myself, ok: myselfOk } = await myselfResponse.json();
   const dbResponse = await apiWithKey("dashboard/db", token, {}, "GET");
   const db = await dbResponse.json();
-  console.log(db.ok, myselfOk);
   if (db.ok && myselfOk)
     dispatch({
       type: "dashboard-init",
